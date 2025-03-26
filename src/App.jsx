@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Home from './components/Home'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Jokepage from './components/Jokepage'
 
 function App() {
  
@@ -13,8 +14,8 @@ function App() {
      <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/jokepage" element={<Jokepage/>} />
+      
       </Routes>
     </Router>
       
