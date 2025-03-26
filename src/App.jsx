@@ -5,19 +5,24 @@ import './App.css'
 import Home from './components/Home'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Jokepage from './components/Jokepage'
+import Createcontext from './Contextapi/Createcontext'
 
 function App() {
  
 
   return (
     <>
+     
      <Router>
+     <Createcontext>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/jokepage" element={<Jokepage/>} />
-      
+        <Route path="/jokepage/:type" element={<Jokepage/>} />
       </Routes>
+      </Createcontext>
     </Router>
+     
+     
       
      
     </>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Pagination from './Pagination';
 
-const Center = () => {
+const Center = React.memo(() => {
     const [items, setitems] =useState([
         {
           "title": "Item One",
@@ -56,6 +56,6 @@ const Center = () => {
       </div>
     </div>
   )
-}
+})
 
 export default Center
