@@ -1,10 +1,27 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import Pagination from './Pagination';
 import { contextapi } from '../Contextapi/Createcontext';
 
 const Center = React.memo(() => {
     const { initial } = useContext(contextapi);
-
+    const observer = useRef(null);
+    useEffect(() => {
+      observer.current = new IntersectionObserver((enteries)=>{
+        enteries.forEach((values)=>{
+            if(values.isIntersecting){
+                values.target.classList.add("show");
+            }else{
+                values.target.classList.remove("show");
+            }
+        })
+      })
+      document.querySelectorAll(".card").forEach((card) => {
+        observer.current.observe(card);
+      });
+      return () => {
+        observer.current.disconnect();
+      }
+    }, [observer])
     
     return (
         <div className="container-fluid d-flex flex-column justify-content-center align-items-center min-vh-100 bg-light">
