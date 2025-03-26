@@ -6,11 +6,17 @@ import Pagination from './Pagination'
 const Jokepage = () => {
   return (
     <div>
-      <Center/>
-      <Type/>
-      <div>
+        <div className='d-flex flex-row'>
+            <div>
+            <Center/>
+            </div>
+            <div>
+             <Type/>
+            </div>
+        </div>
+        <div>
         <Pagination/>
-      </div>
+        </div>
     </div>
   )
 }
