@@ -5,11 +5,12 @@ import { contextapi } from '../Contextapi/Createcontext';
 const Center = React.memo(() => {
     const { initial } = useContext(contextapi);
 
+    
     return (
         <div className="container-fluid d-flex flex-column justify-content-center align-items-center min-vh-100 bg-light">
             <div className="col-12 col-md-8 col-lg-6 border rounded shadow-lg p-4 bg-white" style={{ maxHeight: "70vh", overflowY: "auto" }}>
                 <h5 className="text-center fw-bold mb-3">😂 Jokes 😂</h5>
-                <div className="row g-3">
+                <div className="row g-3 pagination">
                     {initial.length > 0 ? (
                         initial.map((val, index) => (
                             <div className="col-12" key={val.id || index}>
