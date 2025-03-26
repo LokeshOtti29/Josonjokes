@@ -7,7 +7,8 @@ const Type = React.memo(() => {
   const navigate = useNavigate();
   const categorychange =(e)=>{
      e.preventDefault();
-     navigate(e.target.dataset.value);
+     navigate(`/jokepage/${e.target.dataset.value}`);
+     Fetch(e.target.dataset.value)
      console.log(e.target.dataset.value)
   }
   return (

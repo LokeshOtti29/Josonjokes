@@ -5,11 +5,10 @@ import { useParams } from 'react-router-dom';
 export const contextapi = createContext();
 const Createcontext = ({children}) => {
     const [initial, setInitial] = useState([]);
-    const {type} = useParams();
-  const Fetch = useCallback(async()=>{
+  const Fetch = useCallback(async(type)=>{
     
         try {
-            let a = await axios.get(`https://official-joke-api.appspot.com/jokes/${type}/random`);
+            let a = await axios.get(`https://official-joke-api.appspot.com/jokes/${type}/ten`);
             setInitial(a.data);
             
         } catch (error) {
