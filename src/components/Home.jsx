@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>
+    <div className='d-inline-flex'>
         <div>
             <h1>JSON Jokes</h1>
         </div>
