@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Pagination from './Pagination';
 
 const Center = () => {
     const [items, setitems] =useState([
@@ -29,7 +30,7 @@ const Center = () => {
       ]
       );
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div className="d-flex flex-column justify-content-center align-items-center vh-100 bg-light">
       <div className="border rounded shadow-lg p-4 bg-white" style={{ width: "50%", maxHeight: "70vh", overflowY: "auto" }}>
         <h5 className="text-center fw-bold mb-3">😂 Jokes 😂</h5>
         <div className="d-flex flex-column gap-3">
@@ -49,6 +50,9 @@ const Center = () => {
             😂 Joke 5: Why don’t scientists trust atoms? Because they make up everything!
           </div>
         </div>
+      </div>
+      <div>
+        <Pagination/>
       </div>
     </div>
   )

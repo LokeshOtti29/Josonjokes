@@ -9,7 +9,7 @@ const Type = () => {
   <ul className="dropdown-menu">
     <li><a className="dropdown-item" href="#">General</a></li>
     <li><a className="dropdown-item" href="#">Programming</a></li>
-    <li><a className="dropdown-item" href="#">Dad</a></li>
+    <li><a className="dropdown-item" href="#">Dad Jokes</a></li>
     <li><a className="dropdown-item" href="#">Knock-Knock</a></li>
   </ul>
 </div>

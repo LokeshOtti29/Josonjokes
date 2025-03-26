@@ -14,9 +14,7 @@ const Jokepage = () => {
              <Type/>
             </div>
         </div>
-        <div>
-        <Pagination/>
-        </div>
+       
     </div>
   )
 }
