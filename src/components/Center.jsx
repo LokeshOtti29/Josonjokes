@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import Pagination from './Pagination';
+
 import { contextapi } from '../Contextapi/Createcontext';
 
 const Center = React.memo(() => {
@@ -42,9 +42,7 @@ const Center = React.memo(() => {
                     )}
                 </div>
             </div>
-            <div className="mt-3">
-                <Pagination />
-            </div>
+           
         </div>
     );
 });
