@@ -20,7 +20,7 @@ const Center = React.memo(() => {
                 if(lastentry.isIntersecting){
                     loadmorejoke();
                 }
-              },{threshold:1.0})
+              },{threshold:0.0})
         }
       
       if(lastobjref.current){

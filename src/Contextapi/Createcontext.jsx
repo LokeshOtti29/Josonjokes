@@ -1,7 +1,6 @@
 import axios, { Axios } from 'axios';
 import React, { useCallback, useEffect } from 'react'
 import { createContext, useContext, useState } from "react";
-import { useParams } from 'react-router-dom';
 export const contextapi = createContext();
 const Createcontext = ({children}) => {
     const [initial, setInitial] = useState([]);

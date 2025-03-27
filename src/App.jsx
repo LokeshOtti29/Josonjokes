@@ -9,22 +9,30 @@ import Createcontext from './Contextapi/Createcontext'
 
 function App() {
  
+  const paths = [{
+    path:"/",
+    element:<Home/>
+  },
+  {
+    path:"/jokepage/:type",
+    element:<Jokepage/>
+  }
+]
 
   return (
     <>
-     
      <Router>
      <Createcontext>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/jokepage/:type" element={<Jokepage/>} />
+        {paths.map((value,index)=>{
+          return(<Route key={index}path={value.path} element={value.element} />)
+        })}
+        {/* <Route path="/" element={<Home />} />
+        <Route path="/jokepage/:type" element={<Jokepage/>} /> */}
+
       </Routes>
       </Createcontext>
     </Router>
-     
-     
-      
-     
     </>
   )
 }
